@@ -3,6 +3,8 @@
 This project presents a data analysis of the Finnish housing market using official statistics from Statistics Finland's open API.  
 The primary focus is on price trends of new dwellings measured in euros per square meter (EUR/m²) from 2015 to 2024.
 
+📘 View full notebook on Kaggle: [Finland Housing Market Analysis](https://www.kaggle.com/code/yanakrylova/finland-housing-market-analysis-2015-2024)
+
 ---
 
 ## 🔧 How to Run the Project
