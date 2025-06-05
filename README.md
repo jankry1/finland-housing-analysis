@@ -1,61 +1,55 @@
-Finland Housing Market Analysis (2015–2024)
+# 🏠 Finland Housing Market Analysis (2015–2024)
 
-This project presents a data analysis of the Finnish housing market using official statistics from Statistics Finland's open API. The primary focus is on the price trends of new dwellings measured by euros per square meter (EUR/m²) from 2015 to 2024.
+This project presents a data analysis of the Finnish housing market using official statistics from Statistics Finland's open API.  
+The primary focus is on price trends of new dwellings measured in euros per square meter (EUR/m²) from 2015 to 2024.
 
-📦 Project Structure
+---
 
-finland-housing-analysis/
-├── data/
-│   └── finland_housing_api_data.csv         # Raw dataset downloaded from the API
-├── results/
-│   ├── price_trend_finland.png              # Line plot for national trend
-│   ├── price_by_plot_type.png               # Price vs. land ownership
-│   └── price_by_region.png                  # Comparison of Helsinki & Tampere
-├── src/
-│   ├── get_data.py                          # API fetch and CSV export
-│   ├── analyze_data.py                      # Data cleaning, visualization, and analysis
-│   └── utils.py                             # Reusable helper functions
-├── .gitignore
-├── requirements.txt
-└── README.md                                # Project overview (this file)
+## 🔧 How to Run the Project
 
-🔧 How to Run the Project
+### 1. Clone the repository
 
-Clone the repository
-
-git clone https://github.com/your-username/finland-housing-analysis.git
+```bash
+git clone https://github.com/jankry1/finland-housing-analysis.git
 cd finland-housing-analysis
+```
 
-Install dependencies
-
+### 2. Create and activate a virtual environment
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
+
+### 3. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-Fetch the latest data
-
+### 4. Fetch the latest data from Statistics Finland
+```bash
 python src/get_data.py
-
-Run the analysis and generate graphs
-
+```
+### 5. Run the analysis and generate visualizations
+```bash
 python src/analyze_data.py
+```
 
-📊 Key Insights
+## 📊 Key Insights
+📈 Housing prices in Finland have steadily increased from 2015 to 2024, especially after 2020.
+![Price trend in Finland](results/price_trend_finland.png)
 
-Housing prices in Finland have been increasing steadily from 2015 to 2024, with a noticeable rise after 2020.
+🏡 Land ownership affects price trends — dwellings on rented plots show different patterns compared to owned plots.
+![Price by Plot Type](results/price_by_plot_type.png)
 
-Ownership of land impacts pricing — dwellings on rented plots tend to have different trends than those on owned plots.
+📍 Regional comparison: Helsinki's housing prices remain significantly higher than those in other major cities like Tampere.
+![Price by region](results/price_by_region.png)
 
-Helsinki vs. Tampere: Housing prices in Helsinki remain significantly higher than in other major cities.
-
-🛠️ Tools and Technologies
-
+## 🛠️ Tools and Technologies
 Python 3.10+
 
-pandas, matplotlib, seaborn for analysis and visualization
+pandas, matplotlib, seaborn for data analysis and visualization
 
-pyjstat, requests for API querying
+pyjstat, requests for querying the Statistics Finland API
 
-🤝 Acknowledgements
-
-Statistics source: Statistics Finland
+## 🤝 Acknowledgements
+## 📊 Data source: [Statistics Finland Open Data API](https://pxdata.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__ashi/statfin_ashi_pxt_12de.px/)
